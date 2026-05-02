@@ -11,7 +11,7 @@ st.set_page_config(page_title="TCG Predictor", page_icon="🃏", layout="centere
 try:
     genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
     # Wir nutzen Gemini Flash, da es rasend schnell ist
-    model = genai.GenerativeModel('gemini-1.5-pro') 
+    model = genai.GenerativeModel('gemini-1.5-flash') 
 except Exception as e:
     st.error("⚠️ API Key nicht gefunden. Bitte in den Streamlit Secrets eintragen!")
 
